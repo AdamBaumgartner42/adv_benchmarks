@@ -17,21 +17,32 @@ RUN apt-get update && apt-get install -y \
     sudo \
     vim \
     curl \
-    gcc-aarch64-linux-gnu \
-    gcc-riscv64-linux-gnu \
-    gcc-mips-linux-gnu \
-    g++-mips-linux-gnu \
-    gcc-x86-64-linux-gnu \
-    g++-x86-64-linux-gnu \
-    qemu-system-arm \
-    qemu-system-riscv64 \
-    qemu-system-mips64 \
-    qemu-system-x86 \
-    qemu-user \
-    qemu-user-static \
-    gdb \ 
+    gdb \
     make \
-    kmod
+    kmod \
+    # -----------------------
+    # Compiler: 64 bit x86
+    gcc-x86-64-linux-gnu \
+    # Compiler: 64 bit ARM  
+    gcc-aarch64-linux-gnu \
+    # Compiler: 64 bit RISCV 
+    gcc-riscv64-linux-gnu \
+    # Compiler: 32 bit MIPS 
+    gcc-mips-linux-gnu \
+    # -----------------------
+    # Emulator: 64 bit x86
+    qemu-system-x86 \
+    # Emulator: 64 bit ARM
+    qemu-system-aarch64 \
+    # Emulator: 64 bit RISCV
+    qemu-system-riscv64 \
+    # Emulator: 32 bit MIPS
+    qemu-system-mips \
+    # Emulator: unknown
+    qemu-user \
+    # Emulator: unknown
+    qemu-user-static
+    # -----------------------
 
 # Create a user and set up home directory
 ARG USERNAME=nbeser1
