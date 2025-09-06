@@ -596,8 +596,8 @@ void Proc0()
 	printf("Dhrystone(%s) time for %ld passes = %ld\n",
 		Version,
 		(long) LOOPS, benchtime/HZ);
-	printf("This machine benchmarks at %ld dhrystones/second\n",
-		((long) LOOPS) * HZ / benchtime);
+	printf("This machine benchmarks at %lld dhrystones/second\n",
+		((long long) LOOPS) * HZ / benchtime);
 #endif
 
 }
