@@ -385,9 +385,10 @@
 /* Accuracy of timings and human fatigue controlled by next two lines */
 /*#define LOOPS	5000		/* Use this for slow or 16 bit machines */
 /*#define LOOPS	30000		/* Use this for slow or 16 bit machines */
-#define LOOPS	50000000		/* Use this for slow or 16 bit machines */
+// #define LOOPS	50000000		/* Use this for slow or 16 bit machines */
 //#define LOOPS	500000		/* Use this for faster machines */
 /*#define LOOPS 30000        /* Use this for gem5 */
+#define LOOPS 30000000 		/* Use this for Daniel Mirsky's chart*/
 
 /* Compiler dependent options */
 #undef	NOENUM			/* Define if compiler has no enum's */
